@@ -1,0 +1,4 @@
+data/video/
+data/labeled_frames/
+venv/
+*.mp4
