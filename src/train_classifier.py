@@ -1,3 +1,4 @@
+#aim-analyzer\src\train_classifier.py
 """Train a classifier to predict whether crosshair is aligned with the enemy's head."""
 import cv2
 import pickle
@@ -27,9 +28,6 @@ clf.fit(X_train, y_train)
 
 y_pred = clf.predict(X_test)
 print(classification_report(y_test, y_pred))
-
-os.makedirs('../models', exist_ok=True)  # ← cria a pasta se necessário
-
 
 with open('../models/aim_model.pkl', 'wb') as f:
     pickle.dump(clf, f)

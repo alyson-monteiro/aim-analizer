@@ -4,7 +4,7 @@ import pickle
 import os
 import numpy as np
 
-VIDEO_PATH = '../data/valorant.mp4'
+VIDEO_PATH = '../data/video/valorant.mp4'
 MODEL_PATH = '../models/aim_model.pkl'
 
 with open(MODEL_PATH, 'rb') as f:
@@ -41,7 +41,7 @@ while True:
     cv2.putText(frame, f"Prediction: {prediction}", (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, color, 2)
     cv2.imshow("Prediction", frame)
 
-    if cv2.waitKey(30) & 0xFF == ord('q'):
+    if cv2.waitKey(10) & 0xFF == ord('q'):
         break
 
 cap.release()
