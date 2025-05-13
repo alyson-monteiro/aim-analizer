@@ -1,6 +1,6 @@
-train: ../train/images
-val: ../valid/images
-test: ../test/images
+train: C:/Users/Admin/Desktop/Analise Mira/aim-analyzer/roboflow/train/images
+val: C:/Users/Admin/Desktop/Analise Mira/aim-analyzer/roboflow/valid/images
+test: C:/Users/Admin/Desktop/Analise Mira/aim-analyzer/roboflow/test/images
 
 nc: 1
 names: ['head']
@@ -8,6 +8,6 @@ names: ['head']
 roboflow:
   workspace: aimanalyzer
   project: detect-heads
-  version: 1
+  version: 2
   license: CC BY 4.0
-  url: https://universe.roboflow.com/aimanalyzer/detect-heads/dataset/1
+  url: https://universe.roboflow.com/aimanalyzer/detect-heads/dataset/2

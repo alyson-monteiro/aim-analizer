@@ -1,5 +1,7 @@
-data/video/
-data/frames/
-data/roboflow/
+data/
+roboflow/test/
+roboflow/train/
+roboflow/valid/
 venv/
 *.mp4
+
