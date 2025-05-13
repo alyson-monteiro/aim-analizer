@@ -1,5 +1,8 @@
 # 🎯 Aim Analyzer – Valorant Crosshair Feedback with YOLOv8
 
+> 📄 This README is also available in Portuguese:  
+> 🇧🇷 [Leia em Português](README.pt.md)
+
 This project is a real-time **aim alignment analyzer** for the FPS game **Valorant**. It uses a custom-trained [YOLOv8](https://github.com/ultralytics/ultralytics) object detection model to detect **enemy heads** in gameplay footage and evaluates whether your **crosshair is aligned**, **above**, or **below** the target's head.
 
 🤖 Object Detection with YOLOv8
