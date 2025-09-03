@@ -2,6 +2,8 @@ import cv2
 import numpy as np
 import mss
 from ultralytics import YOLO
+import pyautogui
+import keyboard
 
 MODEL_PATH = '../runs/detect/train4/weights/best.pt'
 TOLERANCE = 15
@@ -22,16 +24,20 @@ def main():
             crosshair_y = height // 2
 
             results = model(frame)[0]
-            head_center_y = None
+            head_center_x = head_center_y = None
 
             for box in results.boxes:
                 if int(box.cls[0]) == 0:
                     x1, y1, x2, y2 = map(int, box.xyxy[0])
+                    head_center_x = (x1 + x2) // 2
                     head_center_y = (y1 + y2) // 2
                     cv2.rectangle(frame, (x1, y1), (x2, y2), (255, 255, 0), 2)
                     break
 
             if head_center_y is not None:
+                if keyboard.is_pressed('x'):
+                    pyautogui.moveTo(head_center_x, head_center_y)
+
                 diff = head_center_y - crosshair_y
                 if abs(diff) <= TOLERANCE:
                     label = 'aligned'

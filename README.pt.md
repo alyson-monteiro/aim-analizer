@@ -33,6 +33,7 @@ O modelo foi treinado com frames anotados de partidas de Valorant, usando o Robo
 
 - [Ultralytics](https://github.com/ultralytics/ultralytics): para treinar e executar modelos YOLOv8
 - [OpenCV](https://opencv.org/): para leitura e manipulação de vídeo em tempo real
+- PyAutoGUI e keyboard: para controle do mouse e detecção de teclas
 - **Python**: linguagem principal para processar, integrar e exibir os resultados
 
 ---
@@ -42,7 +43,7 @@ O modelo foi treinado com frames anotados de partidas de Valorant, usando o Robo
 1. **Instale as dependências** (em um ambiente virtual):
 
 ```bash
-pip install ultralytics opencv-python
+pip install ultralytics opencv-python pyautogui keyboard
 ````
 
 2. **Grave ou baixe** um vídeo de gameplay do Valorant como `valorant.mp4`
@@ -52,6 +53,14 @@ pip install ultralytics opencv-python
 ```bash
 python src/analyze_aim.py
 ```
+
+4. **Análise em tempo real da tela** (opcional):
+
+```bash
+python src/aim_screen.py
+```
+
+Enquanto o script estiver rodando, segure a tecla **`X`** para mover o cursor do mouse para o centro da cabeça detectada.
 
 ---
 
