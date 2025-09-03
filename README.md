@@ -22,6 +22,7 @@ Based on this comparison, the frame is classified as:
 ⚙️ Tools and Libraries
 Ultralytics: For training and using YOLOv8 models.
 OpenCV: For video processing and real-time frame analysis.
+PyAutoGUI and keyboard: For mouse control and key detection.
 Python: Core language powering all processing, integration, and logic.
 
 ````
@@ -31,7 +32,7 @@ Python: Core language powering all processing, integration, and logic.
 1. **Install dependencies** (in a virtual environment):
 
 ```bash
-pip install ultralytics opencv-python
+pip install ultralytics opencv-python pyautogui keyboard
 ````
 
 2. **Download or record** your Valorant gameplay as `valorant.mp4`
@@ -41,6 +42,14 @@ pip install ultralytics opencv-python
 ```bash
 python src/analyze_aim.py
 ````
+
+4. **Real-time screen analysis** (optional):
+
+```bash
+python src/aim_screen.py
+````
+
+While this script is running you can hold the **`X`** key to move the mouse cursor to the center of the detected head.
 
 ## 🎥 Some images of the training
 ![val_batch0_pred](https://github.com/user-attachments/assets/69ecf833-8e88-4447-9a85-b09c5d53f172)
